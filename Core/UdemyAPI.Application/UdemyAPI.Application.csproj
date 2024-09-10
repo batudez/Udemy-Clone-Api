@@ -15,4 +15,8 @@
     <ProjectReference Include="..\UdemyAPI.Domain\UdemyAPI.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Storage\" />
+  </ItemGroup>
+
 </Project>
