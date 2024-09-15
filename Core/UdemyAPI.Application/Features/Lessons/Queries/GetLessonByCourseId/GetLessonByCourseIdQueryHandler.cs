@@ -22,6 +22,7 @@ namespace UdemyAPI.Application.Features.Lessons.Queries.GetLessonByCourseId
         public async Task<IList<GetLessonByCourseIdQueryResponse>> Handle(GetLessonByCourseIdQueryRequest request, CancellationToken cancellationToken)
 		{
 			var lessons = await _unitOfWork.GetReadRepository<Lesson>().GetAllAsync(x => x.CourseId == request.CourseId);
+			
 
 			var map = _mapper.Map<GetLessonByCourseIdQueryResponse, Lesson>(lessons);
 

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UdemyAPI.Application.Abstractionss.Storage;
 using UdemyAPI.Application.Features.Courses.Command.CreateCourse;
 using UdemyAPI.Application.Features.Courses.Queries;
 
@@ -10,11 +11,14 @@ namespace UdemyAPI.API.Controllers
 	[ApiController]
 	public class CourseController : ControllerBase
 	{
+		
 		private readonly IMediator _mediator;
-        public CourseController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+		private readonly IWebHostEnvironment _env;
+		public CourseController(IMediator mediator, IWebHostEnvironment env)
+		{
+			_mediator = mediator;
+			_env = env;
+		}
 		[HttpGet]
 		public async Task<IActionResult> GetAllCourses()
 		{
@@ -27,5 +31,6 @@ namespace UdemyAPI.API.Controllers
 			await _mediator.Send(request);
 			return Ok();
 		}
-    }
+		
+	}
 }

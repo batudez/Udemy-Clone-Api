@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyAPI.Persistence", "Inf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyAPI.API", "Presentation\UdemyAPI.API\UdemyAPI.API.csproj", "{0411B6A7-A335-4819-BD59-CCCD472BCE16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyAPI.Mapper", "UdemyAPI.Mapper\UdemyAPI.Mapper.csproj", "{56844E10-98BB-469E-82D4-8DA0212CE74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyAPI.Mapper", "UdemyAPI.Mapper\UdemyAPI.Mapper.csproj", "{56844E10-98BB-469E-82D4-8DA0212CE74A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
